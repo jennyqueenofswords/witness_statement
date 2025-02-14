@@ -13,8 +13,8 @@ jobs:
         id: get_poem
         run: |
           RESPONSE=$(curl -X POST 'https://dify.kn.ly/v1/workflows/run' \
-            --header 'Authorization: Bearer ${{ secrets.DIFY_API_KEY }}' \
-            --header 'Content-Type: application/json' \
+            --header "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
+            --header "Content-Type: application/json" \
             --data-raw '{
                 "inputs": {},
                 "response_mode": "blocking",
@@ -25,7 +25,10 @@ jobs:
           
           POEM=$(echo "$RESPONSE" | jq -r '.data.outputs' || echo "Error: No valid output")
           
-          echo "poem=$POEM" >> $GITHUB_ENV
+          # Safely set the multiline 'poem' environment variable using the heredoc syntax
+          echo "poem<<EOF" >> $GITHUB_ENV
+          echo "$POEM" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Save Poem to Notion
         run: |
@@ -34,10 +37,10 @@ jobs:
           -H "Content-Type: application/json" \
           -H "Notion-Version: 2022-06-28" \
           -d '{
-            "parent": { "database_id": "'${{ secrets.NOTION_DATABASE_ID }}'" },
+            "parent": { "database_id": "'"${{ secrets.NOTION_DATABASE_ID }}"'" },
             "properties": {
               "Title": { "title": [{ "text": { "content": "Statement" }}] },
-              "Date": { "date": { "start": "'$(date -u +%Y-%m-%d)'" }},
-              "Content": { "rich_text": [{ "text": { "content": "'"$POEM"'" }}] }
+              "Date": { "date": { "start": "'"$(date -u +%Y-%m-%d)"'" }},
+              "Content": { "rich_text": [{ "text": { "content": "'"$poem"'" }}] }
             }
           }'
