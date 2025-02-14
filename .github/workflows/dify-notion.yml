@@ -10,7 +10,7 @@ jobs:
       - name: Call Dify Workflow
         id: get_poem  # Fixed indentation
         run: |
-          RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1" \
+          RESPONSE=$(curl -s -X POST "https://dify.kn.ly/v1" \
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{}')
