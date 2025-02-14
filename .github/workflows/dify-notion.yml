@@ -7,15 +7,20 @@ jobs:
   run-dify-and-save:
     runs-on: ubuntu-latest
     steps:
-      - name: Call Dify Workflow
+            - name: Call Dify Workflow
         id: get_poem
         run: |
           RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1" \
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{}')
-          POEM=$(echo $RESPONSE | jq -r '.output')  # Extract poem content
+          
+          echo "Raw API Response: $RESPONSE"  # Debugging step
+          
+          POEM=$(echo "$RESPONSE" | jq -r '.output' || echo "Error: No valid output")
+          
           echo "poem=$POEM" >> $GITHUB_ENV
+
 
       - name: Save Poem to Notion
         run: |
