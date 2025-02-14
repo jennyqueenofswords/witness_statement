@@ -1,3 +1,9 @@
-title: Witness Statement
-description: "Poetry on the day's news from Gemini, Glaude, and GPT"
-theme: jekyll-theme-minimal
+---
+layout: home
+title: "Poems from the day's news from Gemini, Glaude, and GPT"
+---
+
+{% for post in site.posts %}
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p>{{ post.excerpt }}</p>
+{% endfor %}
