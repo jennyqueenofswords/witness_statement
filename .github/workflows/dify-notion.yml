@@ -24,32 +24,46 @@ jobs:
           
           echo "Raw API Response: $RESPONSE"
           
-          # Combine multiple poem outputs ("1", "2", and "4") into one string
-          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs | [.["1"], .["2"], .["4"]] | join("\n\n")')
+          # Extract each poem output separately
+          POEM1=$(echo "$RESPONSE" | jq -r '.data.outputs["1"]')
+          POEM2=$(echo "$RESPONSE" | jq -r '.data.outputs["2"]')
+          POEM4=$(echo "$RESPONSE" | jq -r '.data.outputs["4"]')
           
-          if [[ -z "$POEM" ]]; then
+          if [[ -z "$POEM1" && -z "$POEM2" && -z "$POEM4" ]]; then
               echo "Error: No valid poem output"
               exit 1
           fi
           
-          # Safely export the multiline poem to the GitHub Actions environment
-          echo "poem<<EOF" >> $GITHUB_ENV
-          echo "$POEM" >> $GITHUB_ENV
+          # Export each poem as a multiline environment variable using heredoc syntax
+          echo "poem1<<EOF" >> $GITHUB_ENV
+          echo "$POEM1" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "poem2<<EOF" >> $GITHUB_ENV
+          echo "$POEM2" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "poem4<<EOF" >> $GITHUB_ENV
+          echo "$POEM4" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
       - name: Save Poem to Notion
         run: |
-          # Build the JSON payload safely using jq
+          # Build the JSON payload safely using jq, sending each poem as its own property
           PAYLOAD=$(jq -n \
             --arg dbid "${{ secrets.NOTION_DATABASE_ID }}" \
             --arg date "$(date -u +%Y-%m-%d)" \
-            --arg poem "$poem" \
+            --arg poem1 "$poem1" \
+            --arg poem2 "$poem2" \
+            --arg poem4 "$poem4" \
             '{
               parent: { database_id: $dbid },
               properties: {
                 Title: { title: [{ text: { content: "Statement" } }] },
                 Date: { date: { start: $date } },
-                Content: { rich_text: [{ text: { content: $poem } }] }
+                Content1: { rich_text: [{ text: { content: $poem1 } }] },
+                Content2: { rich_text: [{ text: { content: $poem2 } }] },
+                Content4: { rich_text: [{ text: { content: $poem4 } }] }
               }
             }')
           
