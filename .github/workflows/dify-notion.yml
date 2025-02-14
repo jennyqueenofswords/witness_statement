@@ -2,7 +2,7 @@ name: Fetch Poem from Dify & Save to Notion
 
 on:
   schedule:
-    - cron: "0 1 * * *"  # Runs every day at 12 PM UTC
+    - cron: "0 2 * * *"  # Runs every day at 12 PM UTC
 
 jobs:
   run-dify-and-save:
@@ -11,7 +11,7 @@ jobs:
       - name: Call Dify Workflow
         id: get_poem
         run: |
-          RESPONSE=$(curl -s -X POST "https://api.dify.ai/v1/your-workflow-endpoint" \
+          RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1" \
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{}')
