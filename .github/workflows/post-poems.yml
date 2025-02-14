@@ -1,0 +1,93 @@
+name: Post Daily Poems to GitHub Pages
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # Every day at 12 PM UTC
+  workflow_dispatch:  # Allows manual triggering from the GitHub Actions UI
+
+jobs:
+  post-poems:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Check out the repository (make sure you're on the branch that GitHub Pages uses)
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      # Step 2: Call Dify API and fetch the poems
+      - name: Fetch Poems from Dify
+        id: get_poems
+        run: |
+          # Call the Dify workflow API
+          RESPONSE=$(curl -s -X POST 'https://dify.kn.ly/v1/workflows/run' \
+            --header "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
+            --header "Content-Type: application/json" \
+            --data-raw '{
+                "inputs": {},
+                "response_mode": "blocking",
+                "user": "automation_script"
+              }')
+          
+          echo "Raw API Response: $RESPONSE"
+          
+          # Extract each poem output separately
+          POEM1=$(echo "$RESPONSE" | jq -r '.data.outputs["1"]')
+          POEM2=$(echo "$RESPONSE" | jq -r '.data.outputs["2"]')
+          POEM4=$(echo "$RESPONSE" | jq -r '.data.outputs["4"]')
+          
+          if [[ -z "$POEM1" && -z "$POEM2" && -z "$POEM4" ]]; then
+              echo "Error: No valid poem output"
+              exit 1
+          fi
+          
+          # Export each poem as a multiline environment variable using heredoc syntax
+          echo "poem1<<EOF" >> $GITHUB_ENV
+          echo "$POEM1" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "poem2<<EOF" >> $GITHUB_ENV
+          echo "$POEM2" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "poem4<<EOF" >> $GITHUB_ENV
+          echo "$POEM4" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      # Step 3: Create a new Jekyll post file in the _posts folder
+      - name: Create Post File
+        run: |
+          # Get the current UTC date
+          DATE=$(date -u +%Y-%m-%d)
+          # Create a filename following Jekyll's naming convention: YYYY-MM-DD-title.md
+          FILENAME="_posts/${DATE}-daily-poems.md"
+          mkdir -p _posts
+          cat > $FILENAME <<EOF
+          ---
+          layout: post
+          title: "Daily Poems for $DATE"
+          date: $DATE
+          ---
+          
+          ## Gemini (Model 1)
+          
+          ${poem1}
+          
+          ## Claude (Model 2)
+          
+          ${poem2}
+          
+          ## GPT (Model 4)
+          
+          ${poem4}
+          EOF
+          echo "Created post: $FILENAME"
+
+      # Step 4: Commit and push the new post to your repository
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Add daily poems for $(date -u +%Y-%m-%d)"
+          git push origin main
