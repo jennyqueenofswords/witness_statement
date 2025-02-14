@@ -1,5 +1,8 @@
 name: Post Daily Poems to GitHub Pages
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 12 * * *"  # Every day at 12 PM UTC
