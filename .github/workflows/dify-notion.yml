@@ -1,6 +1,8 @@
 name: Fetch Poem from Dify & Save to Notion
 
 on:
+  schedule:
+    - cron: "0 12 * * *"  # Runs every day at 12 PM UTC
   workflow_dispatch:  # Allows manual triggering from GitHub Actions UI
 
 jobs:
@@ -14,14 +16,14 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{
-              "inputs": {"prompt": "Generate a new poem."},  
+              "inputs": {},
               "response_mode": "blocking",
               "user": "automation_script"
             }')
           
           echo "Raw API Response: $RESPONSE"  # Debugging step
           
-          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs.poem' || echo "Error: No valid output")
+          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs' || echo "Error: No valid output")
           
           echo "poem=$POEM" >> $GITHUB_ENV
 
