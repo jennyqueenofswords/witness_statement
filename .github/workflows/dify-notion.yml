@@ -3,10 +3,6 @@ name: Fetch Poem from Dify & Save to Notion
 on:
   workflow_dispatch:
 
-on:
-  schedule:
-    - cron: "0 2 * * *"  # Runs every day at 12 PM UTC
-
 jobs:
   run-dify-and-save:
     runs-on: ubuntu-latest
