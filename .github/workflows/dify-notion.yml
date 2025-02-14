@@ -1,14 +1,14 @@
 name: Fetch Poem from Dify & Save to Notion
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions UI
 
 jobs:
   run-dify-and-save:
     runs-on: ubuntu-latest
     steps:
-    - name: Call Dify Workflow
-        id: get_poem
+      - name: Call Dify Workflow
+        id: get_poem  # Fixed indentation
         run: |
           RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1" \
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
@@ -20,7 +20,6 @@ jobs:
           POEM=$(echo "$RESPONSE" | jq -r '.output' || echo "Error: No valid output")
           
           echo "poem=$POEM" >> $GITHUB_ENV
-
 
       - name: Save Poem to Notion
         run: |
