@@ -24,8 +24,8 @@ jobs:
           
           echo "Raw API Response: $RESPONSE"
           
-          # Extract the poem text from the output with key "1"
-          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs["1"]')
+          # Combine multiple poem outputs ("1", "2", and "4") into one string
+          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs | [.["1"], .["2"], .["4"]] | join("\n\n")')
           
           if [[ -z "$POEM" ]]; then
               echo "Error: No valid poem output"
