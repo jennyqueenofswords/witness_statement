@@ -7,7 +7,7 @@ jobs:
   run-dify-and-save:
     runs-on: ubuntu-latest
     steps:
-            - name: Call Dify Workflow
+    - name: Call Dify Workflow
         id: get_poem
         run: |
           RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1" \
