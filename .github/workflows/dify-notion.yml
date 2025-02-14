@@ -8,16 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Dify Workflow
-        id: get_poem  # Fixed indentation
+        id: get_poem
         run: |
-          RESPONSE=$(curl -s -X POST "https://dify.kn.ly/v1" \
+          RESPONSE=$(curl -s -X POST "http://dify.kn.ly/v1/workflows/run" \
             -H "Authorization: Bearer ${{ secrets.DIFY_API_KEY }}" \
             -H "Content-Type: application/json" \
-            -d '{}')
+            -d '{
+              "inputs": {"prompt": "Generate a new poem."},  
+              "response_mode": "blocking",
+              "user": "automation_script"
+            }')
           
           echo "Raw API Response: $RESPONSE"  # Debugging step
           
-          POEM=$(echo "$RESPONSE" | jq -r '.output' || echo "Error: No valid output")
+          POEM=$(echo "$RESPONSE" | jq -r '.data.outputs.poem' || echo "Error: No valid output")
           
           echo "poem=$POEM" >> $GITHUB_ENV
 
