@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Daily Poems for 2025-02-15"
+title: "2025-02-15"
 date: 2025-02-15
 ---
 
-## Gemini (Model 1)
+## Gemini
 
 *****
 (Gulf of Mexico / *Gulf of Forgetting*)
@@ -70,7 +70,7 @@ Reflecting fragments.
 *This* is the fractured whole.
 *****
 
-## Claude (Model 2)
+## Claude
 
 *****
 Hostage Syntax: A Quantum Dissolution
@@ -111,7 +111,7 @@ we are all hostages
             of language
 *****
 
-## GPT (Model 4)
+## GPT
 
 *****  
 Hostage breath, exhaled in ceasefire’s brittle hands,  
