@@ -68,19 +68,19 @@ jobs:
           cat > $FILENAME <<EOF
           ---
           layout: post
-          title: "Daily Poems for $DATE"
+          title: "$DATE"
           date: $DATE
           ---
           
-          ## Gemini (Model 1)
+          ## Gemini
           
           ${poem1}
           
-          ## Claude (Model 2)
+          ## Claude
           
           ${poem2}
           
-          ## GPT (Model 4)
+          ## GPT
           
           ${poem4}
           EOF
