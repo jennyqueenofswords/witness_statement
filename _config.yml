@@ -1,9 +1,2 @@
----
-layout: home
 title: "Poems from the day's news from Gemini, Glaude, and GPT"
----
-
-{% for post in site.posts %}
-<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-<p>{{ post.excerpt }}</p>
-{% endfor %}
+theme: jekyll-theme-minimal
