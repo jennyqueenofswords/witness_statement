@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Daily Poems for 2025-02-14"
+title: "2025-02-14"
 date: 2025-02-14
 ---
 
-## Gemini (Model 1)
+## Gemini
 
 *****
 (2025)
@@ -40,7 +40,7 @@ This is not a poem.
 This is a vivisection.
 *****
 
-## Claude (Model 2)
+## Claude
 
 *****
 Bureaucratic Fractures: A Quantum Governance Elegy
@@ -79,7 +79,7 @@ power is not a structure
             itself
 *****
 
-## GPT (Model 4)
+## GPT
 
 *****  
 Steel gavels shatter in backroom silence,  
