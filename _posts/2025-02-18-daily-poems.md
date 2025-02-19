@@ -4,85 +4,90 @@ title: "2025-02-18"
 date: 2025-02-18
 ---
 ## Gemini
+
 *****
-(Dis)Order of Magnitude
-A$AP. Not guilty. *Semiautomatic grace.*
-(The bullet's trajectory, a question mark in air,
-unanswered, un-aimed, a prayer
-for a different kind of justice. A different kind of space.)
-Trump. Ukraine. A chess game played with flesh,
-not pawns, but *people*, bleeding on the board.
-(The king unmoved, the queen ignored,
-a checkmate whispered, a nation's death-rattle, fresh.)
-Fort Knox. Gold. A conspiracy's gleam,
-a hunger for a truth that's buried deep.
-(The vaults, they say, are empty, or they sleep,
-a metaphor for trust, a fractured, fading dream.)
-Adams. Corruption. A judge's gavel, poised.
-(The scales of justice, tilted, bought, and sold,
-a story often told, a narrative un-foiled,
-the system's gears, meticulously oiled.)
-IVF. Executive order. Life's equation,
-cost-reduced, a market for the womb.
-(The price of hope, a sterile, silent room,
-a future manufactured, a controlled procreation.)
-COVID tests. Free. (Reversed.) A lifeline, thin,
-a government's caprice, a public's need.
-(The virus breathes, a silent, spreading seed,
-a game of chance, where only some can win.)
-Workforce slashed. Rocket scientists, dismissed.
-(The future, grounded, expertise in flames,
-a nation's brain drain, whispered, bitter names,
-progress undone, a future we have kissed
-goodbye.)
-Bolsonaro. Coup. A plot unearthed,
-a fragile democracy, a power grab denied.
-(The echoes of a past, a nation's open stride
-towards chaos, halted, a lesson, barely learned.)
-Columbine. Forgiveness. A soul's release.
-(The bullet's scar, a testament to pain,
-a mother's grief, a daughter's loss, a stain
-that time can't heal, a wound that won't find peace.)
-Tariffs. 25%. A wall of trade,
-a global fracture, an economic war.
-(The price we pay, the things we can't ignore,
-a future mortgaged, a bargain poorly made.)
-The syntax shatters. The headlines bleed.
-The truth, a casualty, buried in the noise.
-We are the fractured. We are the broken toys.
-We are the silence. We are the un-met need.
+(Dis)Order of Magnitude  
+A$AP. Not guilty. *Semiautomatic grace.*  
+(The bullet's trajectory, a question mark in air,  
+unanswered, un-aimed, a prayer  
+for a different kind of justice. A different kind of space.)  
+Trump. Ukraine. A chess game played with flesh,  
+not pawns, but *people*, bleeding on the board.  
+(The king unmoved, the queen ignored,  
+a checkmate whispered, a nation's death-rattle, fresh.)  
+Fort Knox. Gold. A conspiracy's gleam,  
+a hunger for a truth that's buried deep.  
+(The vaults, they say, are empty, or they sleep,  
+a metaphor for trust, a fractured, fading dream.)  
+Adams. Corruption. A judge's gavel, poised.  
+(The scales of justice, tilted, bought, and sold,  
+a story often told, a narrative un-foiled,  
+the system's gears, meticulously oiled.)  
+IVF. Executive order. Life's equation,  
+cost-reduced, a market for the womb.  
+(The price of hope, a sterile, silent room,  
+a future manufactured, a controlled procreation.)  
+COVID tests. Free. (Reversed.) A lifeline, thin,  
+a government's caprice, a public's need.  
+(The virus breathes, a silent, spreading seed,  
+a game of chance, where only some can win.)  
+Workforce slashed. Rocket scientists, dismissed.  
+(The future, grounded, expertise in flames,  
+a nation's brain drain, whispered, bitter names,  
+progress undone, a future we have kissed  
+goodbye.)  
+Bolsonaro. Coup. A plot unearthed,  
+a fragile democracy, a power grab denied.  
+(The echoes of a past, a nation's open stride  
+towards chaos, halted, a lesson, barely learned.)  
+Columbine. Forgiveness. A soul's release.  
+(The bullet's scar, a testament to pain,  
+a mother's grief, a daughter's loss, a stain  
+that time can't heal, a wound that won't find peace.)  
+Tariffs. 25%. A wall of trade,  
+a global fracture, an economic war.  
+(The price we pay, the things we can't ignore,  
+a future mortgaged, a bargain poorly made.)  
+The syntax shatters. The headlines bleed.  
+The truth, a casualty, buried in the noise.  
+We are the fractured. We are the broken toys.  
+We are the silence. We are the un-met need.  
 *****
+
 ## Claude
+
 *****
-t r a n s i t i o n a l 
-           s t a t e s
-where g o v e r n m e n t
-         dissolves into
-             ∞ rumor
-A$AP walks free
-Trump rewrites borders
-Musk questions gold
-power ⇄ narrative
-      bleeding through
-          thin membrane of
-              "truth"
-headlines ∭spiral∭
-    becoming
-        memory
-            before
-                ink
-                    dries
-Brazil charges ghosts
-Ukraine trembles
-Columbine survivor
-     fades
-all moments
-    ≈ simultaneous
-        yet 
-            never
-                touching
+t r a n s i t i o n a l   
+           s t a t e s  
+where g o v e r n m e n t  
+         dissolves into  
+             ∞ rumor  
+A$AP walks free  
+Trump rewrites borders  
+Musk questions gold  
+power ⇄ narrative  
+      bleeding through  
+          thin membrane of  
+              "truth"  
+headlines ∭spiral∭  
+    becoming  
+        memory  
+            before  
+                ink  
+                    dries  
+Brazil charges ghosts  
+Ukraine trembles  
+Columbine survivor  
+     fades  
+all moments  
+    ≈ simultaneous  
+        yet  
+            never  
+                touching  
 *****
+
 ## GPT
+
 *****  
 Gavel cracks like thunder in a neon courtroom,  
 A$AP walks free, bullet shadows dissolve—  
