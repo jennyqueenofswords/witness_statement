@@ -7,138 +7,140 @@ date: 2025-02-19
 ## Gemini
 
 *****
-(Dis)Order of Magnitude
+**Echo Chamber (Executive Order)**
 
-A$AP. Not guilty. *Semiautomatic grace.*
-(The bullet's trajectory, a question mark in air,
-unanswered, un-aimed, a prayer
-for a different kind of justice. A different kind of space.)
+The screen flickers, a face contorts,
+a nation fractured,
+re-sorted.
 
-Trump. Ukraine. A chess game played with flesh,
-not pawns, but *people*, bleeding on the board.
-(The king unmoved, the queen ignored,
-a checkmate whispered, a nation's death-rattle, fresh.)
+Ukraine bleeds, a pawn in the game,
+disinformation's whisper,
+a twisted name.
 
-Fort Knox. Gold. A conspiracy's gleam,
-a hunger for a truth that's buried deep.
-(The vaults, they say, are empty, or they sleep,
-a metaphor for trust, a fractured, fading dream.)
+(Zelenskyy, a ghost in the machine,
+truth drowned out,
+a silent scream.)
 
-Adams. Corruption. A judge's gavel, poised.
-(The scales of justice, tilted, bought, and sold,
-a story often told, a narrative un-foiled,
-the system's gears, meticulously oiled.)
+Approval ratings, a downward slide,
+economic anxieties,
+nowhere to hide.
 
-IVF. Executive order. Life's equation,
-cost-reduced, a market for the womb.
-(The price of hope, a sterile, silent room,
-a future manufactured, a controlled procreation.)
+IVF, a bargaining chip, a life defined,
+by executive order,
+a womb confined.
 
-COVID tests. Free. (Reversed.) A lifeline, thin,
-a government's caprice, a public's need.
-(The virus breathes, a silent, spreading seed,
-a game of chance, where only some can win.)
+Musk's shadow, a long, dark reach,
+federal workers tremble,
+at his digital breach.
 
-Workforce slashed. Rocket scientists, dismissed.
-(The future, grounded, expertise in flames,
-a nation's brain drain, whispered, bitter names,
-progress undone, a future we have kissed
-goodbye.)
+(Data streams, a river of souls,
+flowing into algorithms,
+losing all controls.)
 
-Bolsonaro. Coup. A plot unearthed,
-a fragile democracy, a power grab denied.
-(The echoes of a past, a nation's open stride
-towards chaos, halted, a lesson, barely learned.)
+Labor secretary, a puppet on strings,
+skepticism whispers,
+of broken wings.
 
-Columbine. Forgiveness. A soul's release.
-(The bullet's scar, a testament to pain,
-a mother's grief, a daughter's loss, a stain
-that time can't heal, a wound that won't find peace.)
+Adams, a mayor in the crosshairs,
+corruption charges,
+political snares.
 
-Tariffs. 25%. A wall of trade,
-a global fracture, an economic war.
-(The price we pay, the things we can't ignore,
-a future mortgaged, a bargain poorly made.)
+Debt balloons, a monstrous tide,
+DOGE a distraction,
+while the nation divides.
 
-The syntax shatters. The headlines bleed.
-The truth, a casualty, buried in the noise.
-We are the fractured. We are the broken toys.
-We are the silence. We are the un-met need.
+(False killer whales, beached and lost,
+a mirror to our fate,
+counting the cost.)
+
+Free tests, a lifeline withdrawn, then restored,
+a pandemic of lies,
+truth ignored.
+
+The echo chamber roars, a deafening sound,
+reality fractured,
+on shifting ground.
 *****
 
 ## Claude
 
 *****
-t r a n s i t i o n a l 
-           s t a t e s
+∞ fragments of power ∞
 
-where g o v e r n m e n t
-         dissolves into
-             ∞ rumor
+T r u m p
+    whispers
+        into
+            empty
+                corridors
 
-A$AP walks free
-Trump rewrites borders
-Musk questions gold
+[disinformation] drifts
+    like ghost particles
+        between
+            Ukraine │ Washington
+                    ⇄ reality
 
-power ⇄ narrative
-      bleeding through
-          thin membrane of
-              "truth"
+elections spin
+    ≈ truth
+        → dissolving
+            at edges
 
-headlines ∭spiral∭
-    becoming
-        memory
-            before
-                ink
-                    dries
+economy trembles
+    beneath
+        presidential
+            shadows
 
-Brazil charges ghosts
-Ukraine trembles
-Columbine survivor
-     fades
+IVF dreams
+    suspended
+        in executive
+            breath
 
-all moments
-    ≈ simultaneous
-        yet 
-            never
-                touching
+federal workers
+    hover
+        between
+            existence │ dismissal
+
+debt spirals
+    DOGE barking
+        at phantom
+            promises
+
+w h i s p e r s
+    become
+        policy
+            become
+                silence
 *****
 
 ## GPT
 
 *****  
-Gavel cracks like thunder in a neon courtroom,  
-A$AP walks free, bullet shadows dissolve—  
-Echoes of heat, of metal, of maybe,  
-but the jury sculpts innocence from air.  
+Steel-lunged specters howl through the wires,  
+Trumpets of disinformation, gilded in static,  
+Ukraine trembles, a marionette in the hands of ghosts,  
+while the desert whispers deals in oil-slick tongues.  
 
-Trump carves borders in fire and ice,  
-Ukraine shivers beneath his breath,  
-Putin grins like a wolf in a churchyard,  
-and history rewrites itself in real time.  
+Approval drips like rust from the iron spine,  
+economy a beast gnawing its own ribs,  
+DOGE howls at the debt-laden moon,  
+Musk carves bureaucracy with a laser’s edge.  
 
-Musk whispers to the ghosts of Fort Knox,  
-golden veins pulsing beneath conspiracy skin—  
-audit the bones of empire, count the teeth,  
-find the hollow where wealth once slept.  
+IVF stitched into executive ink,  
+new life born from policy’s cold embrace,  
+while federal workers vanish like breath on glass,  
+erased by the algorithmic hand of efficiency.  
 
-Bolsonaro tangled in coup-colored vines,  
-Brazil hums with the static of justice,  
-a dictator’s dream curdles in the sun,  
-and the people sharpen their voices.  
+A judge weighs corruption like sand in a fist,  
+Adams’ fate sways in the balance of unseen tides,  
+while Giroud’s home is hollowed by shadows,  
+a striker left defenseless against the night.  
 
-Anne Marie forgave the bullet’s mother,  
-but time is a thief with no mercy—  
-paralyzed but never broken,  
-she leaves behind echoes of grace.  
+False killer whales wash upon Tasmania’s edge,  
+beached elegies sung to an indifferent sky,  
+hope dissolves like salt in the tide,  
+as the world turns, unblinking, unbowed.  
 
-Tariffs rise like iron walls,  
-factories choke on the weight of policy,  
-autos, chips, pharmaceuticals—  
-all kneel before the altar of profit.  
-
-The world spins, unhinged and electric,  
-a storm of verdicts, orders, and ghosts—  
-history stutters, rewinds, fast-forwards,  
-and we are left to decipher the static.  
+Free tests resurrected from bureaucratic graves,  
+a nation coughs into the void,  
+while power shifts like tectonic plates,  
+grinding history into dust.  
 *****
