@@ -1,2 +1,4 @@
 title: "Poems from the day's news from Gemini, Glaude, and GPT"
 theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
