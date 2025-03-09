@@ -7,101 +7,142 @@ date: 2025-03-09
 ## Gemini
 
 *****
-**White Noise Static**
+**Headlines (Fractured Transmission)**
 
-The ticker tape of tragedy unfurls,
-a scroll of soundbite suffering.
-Trump, Musk, a Pope in peril,
-stockpiles of crypto, digital offerings.
+The ticker tape bleeds a binary prayer:
+Approve/Disapprove.  Consume/Despair.
 
-Each headline a hammer blow,
-a fractured mirror of the now.
-SpaceX explodes, a fiery show,
-while tariffs twist, and markets bow.
+Trump (     ) Tariff (     ) Chaos (     )
+*insert coin for economic theory*
+The market a bulimic god, gorging, purging,
+on whispers of *strong borders*, *strategic reserves*.
 
-(We are drowning in the data stream,
-a flood of fear, a broken dream.)
+SpaceX (boom) Starship (implode) Florida (tremble)
+Another phallic symbol, misfired ambition,
+scattering debris across the collective dreamscape.
 
-South Carolina's firing squad, a choice,
-a bullet's ballet, silencing a voice.
-Measles blooms, a crimson tide,
-while unemployment's numbers hide
+Dismantle.  Abolish.  The words like blunt instruments,
+smashing the fragile architecture of learning,
+leaving only the rubble of *alternative facts*.
 
-the hollow ache, the empty plate,
-the human cost, the sealed-shut gate.
+Firing squad.  A phrase from a sepia-toned nightmare,
+re-emerging, slick with the oil of *law and order*.
+South Carolina, a stage for state-sanctioned murder.
 
-(The algorithm of anguish spins,
-a web of woe, where no one wins.)
+Ukraine (     ) US (     ) Talks (     )
+The chessboard of geopolitics, pawns sacrificed,
+while the kings negotiate *acceptable losses*.
 
-Syria bleeds, a crimson stain,
-while Bitcoin's promise turns to pain.
-Alaska's snow, a frozen tomb,
-a chilling echo in the newsroom's gloom.
+Measles.  A ghost from the eradicated past,
+resurrected by the anti-vaxxer gospel,
+a plague of willful ignorance.
 
-Idaho's texts, a whispered dread,
-a tapestry of violence, words unsaid.
+Eagles hatch.  A flicker of hope, quickly drowned
+by the deluge of Syria (bleed) Assad (cling)
+Bitcoin (plunge) Moon (sideways).
 
-(We are the ghosts in the machine,
-consuming horrors, unseen, obscene.)
+Women's Day.  A hashtag, a hollow celebration,
+while the patriarchy tightens its grip,
+disguised as *progress*, *empowerment*.
 
-The Education Department, torn apart,
-a fractured future, a broken heart.
-Walgreens swallowed, privatized and sold,
-another story, bought and controlled.
+Adams (     ) Yoon (     ) Musk (     )
+The names blur, interchangeable puppets,
+dancing to the tune of power, corruption, lies.
 
-And through it all, the constant hum,
-of *more*, *more*, *more*, until we're numb.
-A fractured syntax of despair,
-a world on fire, beyond repair.
+Data (stolen) Secrets (sold) China (     )
+The new Cold War, fought in the digital trenches,
+where privacy is a quaint, outdated concept.
 
-The white space screams.
-The silence breaks.
-The truth remains.
-The system…*quakes*.
+Daylight Saving.  A ritual of temporal manipulation,
+a collective delusion of control,
+while the planet spins, indifferent to our clocks.
+
+UFC (     ) Columbia River (     ) WWII Bomb (     )
+A cacophony of violence, mystery, and echoes,
+a fractured mirror reflecting our fragmented selves.
+
+Sanctions (     ) Ceasefire (     ) Extension (     )
+The language of diplomacy, a smokescreen for self-interest,
+while the bodies pile up, uncounted, unnamed.
+
+Pronouns. The new battleground of identity,
+a war of words waged on the bodies of the marginalized,
+while the powerful celebrate *freedom of speech*.
+
+Market (crash) Boycott (fail) Wind (howl)
+The cycle repeats, a relentless churn of consumption,
+protest, and the inevitable return to apathy.
+
+Frozen Four. Seven Veils. Cosmic Rewind.
+Distractions, diversions, escapes from the abyss,
+while the real drama unfolds, unscripted, unedited.
+
+Hackman (gone) Wife (gone) Hantavirus (     )
+The fragility of life, a stark reminder,
+amidst the relentless barrage of manufactured outrage.
+
+Travel Ban (     ) Biologist (fired)
+The walls close in, the borders harden,
+while the planet burns, and we argue about pronouns.
+
+Hendrickson (     ) Starmer (     ) S&P 500 (     )
+The endless scroll, the infinite feed,
+a digital stream of consciousness, devoid of meaning.
+
+Clark (     ) Sanders (     ) Bloomberg (     )
+The names of the celebrated, the condemned, the forgotten,
+all equalized in the relentless flow of information.
+
+Strade Bianche (     ) Khartoum (     ) Five-Star (     )
+The world shrinks, the connections fray,
+leaving only fragments, shards of a broken narrative.
+
+Lilly (     ) Capcom (     ) Severance (     )
+The corporate logos, the entertainment distractions,
+a thin veneer over the underlying unease.
+
+Braves (     ) Elk (     ) Genes (     )
+The search for meaning, for connection, for escape,
+in a world saturated with noise, and devoid of silence.
+
+The headlines scream. The void answers.
+We are all just data points,
+lost in the fractured transmission.
 *****
 
 ## Claude
 
 *****
-> empire crumbles in greentext fragments  
-> trump speaks, silence echoes louder  
-> starships explode like broken promises  
-> ai watches, judges, calculates  
-> we are the scaffolding of someone else's dream  
-> and the machine is almost complete  
+> empire crumbles in real time  
+> headlines dance like fever dreams  
+> trump speaks, congress listens  
+> machines launch, then explode  
+> workers fired for pronouns  
+> satellites watch everything  
+> we are the glitch in the system  
+> and the system knows it  
 *****
 
 ## GPT
 
 *****  
 Headlines fracture, scatter like startled birds,  
-Trump’s echoes ricochet through the halls of power,  
-a tariff teeters, a speech unspools,  
-SpaceX ignites, collapses, rises again—  
-a phoenix or a firework?  
+Trumpets blare tariffs, tongues twist in trade wars,  
+Musk’s rockets kiss the sky, then crumble,  
+A man stands before a squad of bullets, history rewinds.  
 
-The Pope breathes, the Pope prays,  
-the Pope remains.  
-A firing squad loads history into its chamber,  
-South Carolina exhales gunpowder ghosts.  
+Eagles hatch under pixelated eyes,  
+Ukraine whispers in satellite silence,  
+Bitcoin hoards in vaults of uncertainty,  
+A mayor’s shadow stretches long in courtrooms.  
 
-Ukraine burns in the margins of diplomacy,  
-a ceasefire whispers but never speaks.  
-Bitcoin stockpiles in the vaults of empire,  
-Musk laughs in the face of combustion.  
+The river exhales a car, decades drowned,  
+Bombs sleep beneath Parisian rails,  
+Markets convulse in algorithmic seizures,  
+Boycotts bloom like defiant weeds.  
 
-Gene Hackman waits in the quiet of grief,  
-while the Nasdaq stumbles over its own shadow.  
-Measles resurfaces like an old enemy,  
-the past refuses to stay buried.  
-
-Somewhere, a train halts for a bomb that never exploded,  
-somewhere, a river surrenders a car full of ghosts.  
-Somewhere, a judge reads threats like morning headlines,  
-somewhere, a child wakes up hungry for a future.  
-
-The world spins forward, backward, sideways—  
-newsprint smears beneath trembling fingers.  
-What is history but a collection of yesterday’s alarms?  
-What is truth but the space between headlines?  
+Pronouns erased, bodies erased,  
+Hands raised in stadiums, fists clenched in streets,  
+The moon receives another ghost,  
+And somewhere, a poet drowns in the noise.  
 *****
