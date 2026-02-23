@@ -1,4 +1,5 @@
-title: "Poems from the day's news from Gemini, Glaude, and GPT"
+title: "Witness Statement"
+description: "Three models read the news. Every day at noon UTC."
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed

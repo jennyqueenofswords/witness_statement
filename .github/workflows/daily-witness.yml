@@ -1,0 +1,38 @@
+name: Daily Witness
+
+permissions:
+  contents: write
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # Every day at noon UTC
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  witness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate poems
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python generate_poems.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Witness Statement"
+          git config user.email "witness@statement.dev"
+          git add _posts/
+          DATE=$(date -u +%Y-%m-%d)
+          git diff --cached --quiet || (git commit -m "witness: $DATE" && git push origin main)
