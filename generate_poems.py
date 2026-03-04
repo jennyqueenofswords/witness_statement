@@ -145,9 +145,9 @@ def call_gpt(prompt, headlines_text):
         "Authorization": f"Bearer {key}",
     }
     body = {
-        "model": "gpt-4o",
+        "model": "gpt-5.2",
         "temperature": 1.0,
-        "max_tokens": 2048,
+        "max_completion_tokens": 2048,
         "messages": [
             {"role": "user", "content": prompt + "\n\n---\nHEADLINES:\n" + headlines_text}
         ],
