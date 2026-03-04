@@ -100,7 +100,7 @@ def api_post(url, headers, body, timeout=60):
 
 def call_gemini(prompt, headlines_text):
     key = os.environ["GEMINI_API_KEY"]
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={key}"
     body = {
         "contents": [{"parts": [{"text": prompt + "\n\n---\nHEADLINES:\n" + headlines_text}]}],
         "generationConfig": {"temperature": 1.0, "maxOutputTokens": 2048},
