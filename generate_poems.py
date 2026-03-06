@@ -2,13 +2,13 @@
 """
 Witness Statement — Daily AI poetry from the news.
 Three models. Same prompt. Same headlines. Different eyes.
+All calls routed through OpenRouter.
 """
 
 import os
 import json
 import datetime
 import urllib.request
-import urllib.parse
 import xml.etree.ElementTree as ET
 import ssl
 
@@ -31,6 +31,12 @@ FEEDS = [
     "https://feeds.npr.org/1001/rss.xml",
     "https://www.democracynow.org/democracynow.rss",
 ]
+
+MODELS = {
+    "Gemini": "google/gemini-2.5-flash",
+    "Claude": "anthropic/claude-sonnet-4-6",
+    "GPT": "openai/gpt-4o",
+}
 
 PROMPT = f"""Today is {DATE}.
 
@@ -84,86 +90,45 @@ def fetch_headlines():
     return unique[:60]
 
 
-# ── API calls ───────────────────────────────────────────────
-def api_post(url, headers, body, timeout=60):
-    """Simple POST request, returns parsed JSON."""
-    data = json.dumps(body).encode("utf-8")
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-    try:
-        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CTX) as resp:
-            return json.loads(resp.read())
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode("utf-8", errors="replace")
-        print(f"[error] HTTP {e.code}: {error_body[:500]}")
-        return None
-
-
-def call_gemini(prompt, headlines_text):
-    key = os.environ["GEMINI_API_KEY"]
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key={key}"
-    body = {
-        "contents": [{"parts": [{"text": prompt + "\n\n---\nHEADLINES:\n" + headlines_text}]}],
-        "generationConfig": {"temperature": 1.0, "maxOutputTokens": 2048},
-    }
-    resp = api_post(url, {"Content-Type": "application/json"}, body)
-    try:
-        return resp["candidates"][0]["content"]["parts"][0]["text"]
-    except (KeyError, IndexError):
-        print(f"[error] Gemini response: {json.dumps(resp)[:500]}")
-        return None
-
-
-def call_claude(prompt, headlines_text):
-    key = os.environ["ANTHROPIC_API_KEY"]
-    url = "https://api.anthropic.com/v1/messages"
-    headers = {
-        "Content-Type": "application/json",
-        "x-api-key": key,
-        "anthropic-version": "2023-06-01",
-    }
-    body = {
-        "model": "claude-sonnet-4-6",
-        "max_tokens": 2048,
-        "temperature": 1.0,
-        "messages": [
-            {"role": "user", "content": prompt + "\n\n---\nHEADLINES:\n" + headlines_text}
-        ],
-    }
-    resp = api_post(url, headers, body)
-    try:
-        return resp["content"][0]["text"]
-    except (KeyError, IndexError):
-        print(f"[error] Claude response: {json.dumps(resp)[:500]}")
-        return None
-
-
-def call_gpt(prompt, headlines_text):
-    key = os.environ["OPENAI_API_KEY"]
-    url = "https://api.openai.com/v1/chat/completions"
+# ── OpenRouter API ─────────────────────────────────────────
+def call_openrouter(model, prompt, headlines_text):
+    key = os.environ["OPENROUTER_API_KEY"]
+    url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
         "Authorization": f"Bearer {key}",
     }
     body = {
-        "model": "gpt-5.2",
+        "model": model,
         "temperature": 1.0,
-        "max_completion_tokens": 2048,
+        "max_tokens": 2048,
         "messages": [
             {"role": "user", "content": prompt + "\n\n---\nHEADLINES:\n" + headlines_text}
         ],
     }
-    resp = api_post(url, headers, body)
+    data = json.dumps(body).encode("utf-8")
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
-        return resp["choices"][0]["message"]["content"]
+        with urllib.request.urlopen(req, timeout=90, context=SSL_CTX) as resp:
+            result = json.loads(resp.read())
+        return result["choices"][0]["message"]["content"]
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode("utf-8", errors="replace")
+        print(f"[error] HTTP {e.code}: {error_body[:500]}")
+        return None
     except (KeyError, IndexError):
-        print(f"[error] GPT response: {json.dumps(resp)[:500]}")
+        print(f"[error] Unexpected response: {json.dumps(result)[:500]}")
         return None
 
 
 # ── build the post ──────────────────────────────────────────
-def create_post(gemini_poem, claude_poem, gpt_poem):
+def create_post(poems):
     filename = f"_posts/{DATE}-daily-poems.md"
     os.makedirs("_posts", exist_ok=True)
+
+    sections = []
+    for name in MODELS:
+        sections.append(f"## {name}\n\n{poems.get(name) or '*[no signal]*'}")
 
     content = f"""---
 layout: post
@@ -171,17 +136,7 @@ title: "{DATE}"
 date: {DATE}
 ---
 
-## Gemini
-
-{gemini_poem or '*[no signal]*'}
-
-## Claude
-
-{claude_poem or '*[no signal]*'}
-
-## GPT
-
-{gpt_poem or '*[no signal]*'}
+{"".join(s + "\n\n" for s in sections).rstrip()}
 """
     with open(filename, "w") as f:
         f.write(content)
@@ -204,32 +159,18 @@ if __name__ == "__main__":
 
     headlines_text = "\n".join(f"- {h}" for h in headlines)
 
-    print("[witness] Calling Gemini...")
-    try:
-        gemini = call_gemini(PROMPT, headlines_text)
-    except Exception as e:
-        print(f"[error] Gemini exception: {e}")
-        gemini = None
-    print(f"[witness] Gemini: {'OK' if gemini else 'FAILED'}")
+    poems = {}
+    for name, model in MODELS.items():
+        print(f"[witness] Calling {name} ({model})...")
+        try:
+            poems[name] = call_openrouter(model, PROMPT, headlines_text)
+        except Exception as e:
+            print(f"[error] {name} exception: {e}")
+            poems[name] = None
+        print(f"[witness] {name}: {'OK' if poems[name] else 'FAILED'}")
 
-    print("[witness] Calling Claude...")
-    try:
-        claude = call_claude(PROMPT, headlines_text)
-    except Exception as e:
-        print(f"[error] Claude exception: {e}")
-        claude = None
-    print(f"[witness] Claude: {'OK' if claude else 'FAILED'}")
-
-    print("[witness] Calling GPT...")
-    try:
-        gpt = call_gpt(PROMPT, headlines_text)
-    except Exception as e:
-        print(f"[error] GPT exception: {e}")
-        gpt = None
-    print(f"[witness] GPT: {'OK' if gpt else 'FAILED'}")
-
-    if not any([gemini, claude, gpt]):
+    if not any(poems.values()):
         print("[error] All models failed. No post created.")
         exit(1)
 
-    create_post(gemini, claude, gpt)
+    create_post(poems)
